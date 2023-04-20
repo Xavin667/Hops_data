@@ -77,6 +77,7 @@ def print_aromas(sheet, cell):
     count = 0  # counter to know how many rows to go back to the initial cell.row number
     print(f'\n{sheet.cell(row=cell.row, column=cell.column).value}\n')
     print('Aromaty ogólne: ')
+    # Read from cell below in Aromaty ogólnie column until 'Typ chmielu' is found
     while True:
         if sheet.cell(row=cell.row, column=cell.column + 1).value == 'Typ chmielu':
             break
@@ -90,6 +91,7 @@ def print_aromas(sheet, cell):
     count = 0
     print("-" * 30)
     print("Aromaty 'dokladnie': ")
+    # Read from cell below in Aromaty 'dokladnie' column until None is found
     while True:
         if sheet.cell(row=cell.row, column=cell.column + 2).value is None:
             break
@@ -143,3 +145,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
