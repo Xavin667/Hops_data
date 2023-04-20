@@ -1,8 +1,7 @@
 """Test file for the main.py"""
-from openpyxl import load_workbook
 import unittest
 from unittest import mock
-from main import *
+from Hops_data.main import *
 
 
 class TestHops(unittest.TestCase):
